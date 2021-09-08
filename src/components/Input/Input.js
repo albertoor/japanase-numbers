@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
-import japaneseNumbers from "../../constants/japaneseNumbers";
+import { useState } from "react";
+import usePronunciation from "../../hooks/usePronunciation";
 
 export default function Input() {
   const [number, setNumber] = useState();
-  const [pronunciation, setPronunciation] = useState("");
+  const pronunciation = usePronunciation(number);
 
   const handleChange = (e) => {
     setNumber(e.target.value);
   };
-
-  const getPronuntiation = () => {
-    setPronunciation(japaneseNumbers[parseInt(number)]);
-  };
-
-  useEffect(() => {
-    getPronuntiation();
-  });
 
   return (
     <>
