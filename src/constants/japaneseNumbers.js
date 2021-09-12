@@ -1,4 +1,4 @@
-const firstTenNumbers = [
+const pronunciations = [
   "rei",
   "ichi",
   "ni",
@@ -9,7 +9,19 @@ const firstTenNumbers = [
   "nana",
   "achi",
   "kyuu",
-  "juu",
 ];
 
-export default firstTenNumbers;
+const hiraganas = [
+  "れい",
+  "いち",
+  "に",
+  "さん",
+  "し",
+  "ご",
+  "ろく",
+  "しち",
+  "はち",
+  "きゅう",
+];
+
+export { pronunciations, hiraganas };
