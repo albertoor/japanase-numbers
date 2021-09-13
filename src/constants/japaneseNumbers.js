@@ -1,4 +1,4 @@
-const pronunciations = [
+const pronunciationsOfNumbers = [
   "rei",
   "ichi",
   "ni",
@@ -11,7 +11,7 @@ const pronunciations = [
   "kyuu",
 ];
 
-const hiraganas = [
+const hiraganasOfNumbers = [
   "れい",
   "いち",
   "に",
@@ -24,4 +24,28 @@ const hiraganas = [
   "きゅう",
 ];
 
-export { pronunciations, hiraganas };
+const kanjiOfNumbers = [
+  "〇",
+  "一",
+  "二",
+  "三",
+  "四",
+  "五",
+  "六",
+  "七",
+  "八",
+  "九",
+];
+
+const ten = "juu";
+const tenHiragana = "じゅう";
+const tenKanji = "十";
+
+export {
+  pronunciationsOfNumbers,
+  hiraganasOfNumbers,
+  kanjiOfNumbers,
+  ten,
+  tenHiragana,
+  tenKanji,
+};

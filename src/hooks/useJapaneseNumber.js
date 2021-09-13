@@ -1,16 +1,29 @@
 import { useState, useEffect } from "react";
-import { pronunciations, hiraganas } from "../constants/japaneseNumbers";
+import {
+  pronunciationsOfNumbers,
+  hiraganasOfNumbers,
+  kanjiOfNumbers,
+  ten,
+  tenHiragana,
+  tenKanji,
+} from "../constants/japaneseNumbers";
 
 export default function useJapaneseNumber(number) {
   const [pronunciation, setPronunciation] = useState("");
   const [hiragana, setHiragana] = useState("");
+  const [kanji, setKanji] = useState("");
 
   useEffect(() => {
-    setPronunciation(pronunciations[number]);
-    setHiragana(hiraganas[number]);
+    if (number === "10") {
+      setPronunciation(ten);
+      setHiragana(tenHiragana);
+      setKanji(tenKanji);
+    } else {
+      setPronunciation(pronunciationsOfNumbers[number]);
+      setHiragana(hiraganasOfNumbers[number]);
+      setKanji(kanjiOfNumbers[number]);
+    }
+  }, [number]);
 
-    // setPronu nciation(number.length);
-  }, [number, hiragana]);
-
-  return { pronunciation, hiragana };
+  return { pronunciation, hiragana, kanji };
 }
