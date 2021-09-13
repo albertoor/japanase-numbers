@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const images = [
   "https://takelessons.com/blog/wp-content/uploads/2015/06/zero1.jpg",
@@ -16,15 +17,22 @@ const images = [
 
 export default function Card({ pronunciation, hiragana, kanji, number }) {
   return (
-    <div>
-      <h1>Pronunciation: {pronunciation}</h1>
-      <h1>Hiragana: {hiragana}</h1>
-      <h1>Kanji: {kanji}</h1>
-      {number ? (
-        <img src={images[number]} alt="number" srcset="" />
-      ) : (
-        <p>No number yet or the number is not in the range (0-10)</p>
-      )}
+    <div className="card">
+      <div className="card-info">
+        <h1>Pronunciation:</h1>
+        <h2>{pronunciation}</h2>
+        <h1>Hiragana:</h1>
+        <h2>{hiragana}</h2>
+        <h1>Kanji: </h1>
+        <h2>{kanji}</h2>
+      </div>
+      <div className="card-image">
+        {number ? (
+          <img src={images[number]} alt="number" srcset="" />
+        ) : (
+          <p>No number yet or the number is not in the range (0-10)</p>
+        )}
+      </div>
     </div>
   );
 }
