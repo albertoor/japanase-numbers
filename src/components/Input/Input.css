@@ -1,0 +1,18 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container > label {
+  color: #982f1a;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.input-container > input {
+  padding: 1rem;
+  font-size: 25px;
+  border-radius: 15px;
+  border: none;
+  margin: 1rem 1rem;
+}

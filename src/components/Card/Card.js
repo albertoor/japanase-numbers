@@ -17,9 +17,9 @@ const images = [
 export default function Card({ pronunciation, hiragana, kanji, number }) {
   return (
     <div>
-      <h1>Pronunciation {pronunciation}</h1>
-      <h1>Hiragana {hiragana}</h1>
-      <h1>Kanji {kanji}</h1>
+      <h1>Pronunciation: {pronunciation}</h1>
+      <h1>Hiragana: {hiragana}</h1>
+      <h1>Kanji: {kanji}</h1>
       {number ? (
         <img src={images[number]} alt="number" srcset="" />
       ) : (

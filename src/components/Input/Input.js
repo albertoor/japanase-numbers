@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Input.css";
 import Card from "../Card/Card";
 import useJapaneseNumber from "../../hooks/useJapaneseNumber";
 
@@ -12,14 +13,16 @@ export default function Input() {
 
   return (
     <>
-      <label htmlFor="number">Enter number</label>
-      <input type="text" value={number} onChange={(e) => handleChange(e)} />
-      <Card
-        pronunciation={pronunciation}
-        hiragana={hiragana}
-        kanji={kanji}
-        number={number}
-      />
+      <div className="input-container">
+        <label htmlFor="number">Enter number</label>
+        <input type="text" value={number} onChange={(e) => handleChange(e)} />
+        <Card
+          pronunciation={pronunciation}
+          hiragana={hiragana}
+          kanji={kanji}
+          number={number}
+        />
+      </div>
     </>
   );
 }
